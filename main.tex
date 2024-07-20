@@ -1,0 +1,74 @@
+What is PrizePicks? From their website, “PrizePicks is daily fantasy made easy. It’s just you against the numbers. Members predict more or less on between 2 and 6 player squares of their choice. The more picks they correctly predict, the more money they win! Payouts on PrizePicks can be as high as 25X!”
+
+PrizePicks is very similar to Sports Betting, but it is categorized as a “fantasy game” which makes it legal for people over the age of 19 and also makes it legal in many states where sports betting is typically illegal. As such, PrizePicks has gained a lot of popularity over the past two years.
+
+One of the first questions that come to mind is if we can make money playing PrizePicks. This is what we are going to figure out.
+
+What are the rules? To play, the user selects between two and six sides of a player prop (over or under) to create an entry. The payout for successful entrees are shown below.
+
+
+The payout chart is slightly misleading as the payout includes the user's entry fee as well. For example, betting 100 dollars and getting 4 of 4 correct on a Power Play actually wins you a profit of 100*(10-1) = 900 dollars, or +900 odds on American sportsbooks.
+It’s worth noting that ties bring the entire bet down to the next tier of payouts. For example, if a user made a 4-leg Power Play and won 3 lines and tied 1, then the user would be paid out as if they won a 3 of 3 Power Play. We can avoid this by playing every prop at a half-point, so we will ignore this in our calculations. 
+
+Onto the math. Assuming each pick has a 50-50 chance of being correct and we bet x dollars each bet, here are the EV calculations for all the different types of PrizePicks bets.
+
+
+Using 50-50 odds, the best PrizePicks games are the 2-pick Power Play, the 3-pick Flex Play, and the 5-leg Flex Play. However, this is still pretty grim: in the best case over many games, we are still expected to lose a quarter for every dollar we put in. 
+
+Fortunately, we can try to improve upon this. Assuming we are making 1 dollar bets and we predict each line with probability p, we can plot the EV against probability to figure out what probability we need to break even (EV = 0). 
+
+For the Power Plays, we can see that even though the green graph (3-leg Power Play) has the best EV when we have 50-50 odds per line, the blue graph (4-leg Power Play) actually requires the lowest probability for breaking even.  
+
+We can calculate these values.
+
+The 4-leg Power Play needs a win probability of around 56.2% to break even (-129 odds).
+The 3-leg Power Play needs a win probability of around 58.5% to break even (-141 odds).
+The 2-leg Power Play needs a win probability of around 57.7% to break even (-137 odds).
+
+To summarize the Power Plays, to get the best value, we need to find $4$ legs with at least -129 American sportsbook odds to make playing the 4-leg Power Play worth it.
+
+(Note: to find these lines, we would need to use a real sportsbook like Fanduel and go “line shopping” by browsing the player props section and finding lines with good odds.)
+
+
+
+
+
+
+
+
+Let’s check the Flex Plays.
+
+
+For the Flex Plays, we can see that even though the red graph (3-leg Flex Play) and the orange graph (5-leg Flex Play) has the best EV when we have 50-50 odds per line, the blue graph (6-leg Power Play) actually beats orange graph (5-leg Flex Play) ever so slightly for the graph that requires the lowest probability for breaking even.  
+
+We can calculate these values.
+
+The 6-leg Flex Play needs a win probability of around 54.21% to break even (-118.4 odds).
+The 5-leg Flex Play needs a win probability of around 54.25% to break even (-118.6 odds).
+The 4-leg Flex Play needs a win probability of around 56.9% to break even (-132 odds).
+The 3-leg Flex Play needs a win probability of around 59.8% to break even (-149 odds).
+
+To summarize the Flex Plays, to get the best value, we need to find 5 or 6 legs with at least -119 American sportsbook odds to make playing the 5-leg or 6-leg Flex Play worth it.
+
+
+
+
+
+
+
+
+
+For fun, here is a Monte Carlo Simulation of the 5-leg Flex Play with 54.25% odds. 
+
+
+As we expected, the EV is pretty much 0. 
+
+Final Thoughts. So, going back to the question that started this all, can we make money playing PrizePicks? The answer is complicated. The best shot at making money through PrizePicks is by line shopping for a few bets with odds of -119 or better and putting them all on a 5-leg or 6-leg Flex Play. While we won’t hit all the legs very frequently, this play gives us the best chance of being profitable in the long run. 
+
+PrizePicks also runs two weekly promotions: Taco Tuesdays where some lines are heavily discounted (their odds are very good, much better than -119) and Flex Fridays where PrizePicks issues site credits if your Flex Play doesn’t win money. Playing on these days will increase your overall odds of winning.
+
+Prizepicks also randomly issues Free Squares which are just legs that are guaranteed to hit, thus reducing the number of legs you need to pick while keeping the payout the same. 
+
+And finally, if you are new to PrizePicks and use my affiliate code PR-OW7EOUD to register, you can get your first deposit matched up to 100 dollars. So if you put in 100 dollars, you will get 200 dollars worth of PrizePicks betting credits which you can turn into real money with what we just learned. The deposit match essentially increases your EV by 50 percent which is almost guaranteed money. 
+
+In practice, after all that, it is still very hard to win. But the point of this analysis was to present the math behind PrizePicks to give you the best chances of winning. Good luck!
